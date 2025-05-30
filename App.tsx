@@ -9,6 +9,7 @@ import Dash from "./dash";
 import Login_pg from "./login2"
 import Id from "./id";
 import studentinfo from "./data";
+import Game from "./game";
 export type RootStackParamlist={
   register:undefined;
   home:undefined;
@@ -20,14 +21,17 @@ export type RootStackParamlist={
 const App = () => {
    
 return(
+  
  <NavigationContainer>
       <Stack.Navigator initialRouteName="register">
         <Stack.Screen name="register" component={Register_pg} />
         <Stack.Screen name="home" component={Dash} />
          <Stack.Screen name="new_pg" component={Login_pg} />
          <Stack.Screen name="studentinfo" component={studentinfo}/>
+         <Stack.Screen name="Game" component={Game}/>
       </Stack.Navigator>
     </NavigationContainer>
+    
 );
 };
 export default App;
